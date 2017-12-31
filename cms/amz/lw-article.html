@@ -1,0 +1,48 @@
+<extend file='resource/view/amz/lw.html'/>
+<block name="article">
+            <article class="am-article blog-article-p">
+                <div class="am-article-hd">
+                    <h1 class="am-article-title blog-text-center">{{$_articleData['title']}}</h1>
+                    <p class="am-article-meta blog-text-center">
+                        <span><a href="#" class="blog-color">article &nbsp;</a></span>-
+                        <span><a href="#">{{$_articleData['author']}} &nbsp;</a></span>-
+                        <span><a href="#">{{$_articleData['created_at']}}</a></span>
+                    </p>
+                </div>
+                <div class="am-article-bd">
+                    {!!$_articleData['content']!!}
+                </div>
+            </article>
+
+            <div class="am-g blog-article-widget blog-article-margin">
+                <div class="am-u-lg-4 am-u-md-5 am-u-sm-7 am-u-sm-centered blog-text-center">
+                    <span class="am-icon-tags"> &nbsp;</span><a href="#">{{$_articleData['arc_keyword']}}</a>
+                    <hr>
+                    <a href=""><span class="am-icon-qq am-icon-fw am-primary blog-icon"></span></a>
+                    <a href=""><span class="am-icon-wechat am-icon-fw blog-icon"></span></a>
+                    <a href=""><span class="am-icon-weibo am-icon-fw blog-icon"></span></a>
+                </div>
+            </div>
+            <hr>
+            <ul class="am-pagination blog-article-margin">
+                <li class="am-pagination-prev"><a href="#" class="">&laquo; 一切的回顾</a></li>
+                <li class="am-pagination-next"><a href="">不远的未来 &raquo;</a></li>
+            </ul>
+
+            <hr>
+
+            <form class="am-form am-g">
+                <h3 class="blog-comment">评论</h3>
+                <fieldset>
+                    <div class="am-form-group">
+                        <textarea class="" rows="5" placeholder="一字千金"></textarea>
+                    </div>
+
+                    <p>
+                        <button type="submit" class="am-btn am-btn-default">发表评论</button>
+                    </p>
+                </fieldset>
+            </form>
+
+            <hr>
+</block>

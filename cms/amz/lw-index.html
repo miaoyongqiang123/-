@@ -1,0 +1,20 @@
+<extend file='resource/view/amz/lw.html'/>
+<block name="content">
+<foreach from="$field"  key="$k" value="$v">
+    <article class="am-g blog-entry-article">
+        <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
+            <img src="{{__ROOT__}}/{{$v->prev}}" alt="" class="am-u-sm-12">
+        </div>
+        <div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-text">
+            <span><a href="" class="blog-color">article &nbsp;</a></span>
+            <span> {{$v->author}} &nbsp;</span>
+            <span>{{$v->created_at}}</span>
+            <h1><a href="{{u('home.entry.article').'&id='. $v->id}}">{{$v->title}}</a></h1>
+            <p>
+                {{$v->description}}
+            </p>
+            <p><a href="" class="blog-continue">continue reading</a></p>
+        </div>
+    </article>
+</foreach>
+</block>
